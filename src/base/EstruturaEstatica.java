@@ -7,7 +7,7 @@ public class EstruturaEstatica <T>{
 
     @SuppressWarnings("unchecked")
     public EstruturaEstatica(int capacidade){
-        this.elementos = (T[]) new Object[capacidade]; //solução do livro effective Java
+        this.elementos = (T[]) new Object[capacidade];
         this.tamanho = 0;
     }
 
@@ -37,7 +37,7 @@ public class EstruturaEstatica <T>{
 
         this.aumentaCapacidade();
 
-        //mover todos os elementos
+
         for (int i=this.tamanho-1; i>=posicao; i--){
             this.elementos[i+1] = this.elementos[i];
         }
